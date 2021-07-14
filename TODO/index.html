@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="todos">
+
+    <div class="header">
+        <div class="header__text">todos</div>
+    </div>
+
+    <div class="todo-main-part">
+        <div class="todo-main-part__center-items">
+            <div class="todo-input todo-main-part_style">
+                <img class="todo-input__icon" src="icons/select-all.png" alt="">
+                <input class="todo-input__input-field input-field text" type="text" placeholder="What needs to be done?" />
+            </div>
+            <div class="todo-list">
+                <ul class="todo-list-checkbox">
+                    <li class="todo-list__item todo-main-part_style">
+                        <input class="todo-list__checkbox" type="checkbox" id="HTML" value="no"/>
+                        <label class="todo-list__label" for="HTML"></label>
+                    </li>
+                    <li class="todo-list__item todo-main-part_style">
+                        <input class="todo-list__checkbox" type="checkbox" id="CSS" value="no"/>
+                        <label class="todo-list__label" for="CSS"></label>
+                    </li>
+                    <li class="todo-list__item todo-main-part_style">
+                        <input class="todo-list__checkbox" type="checkbox" id="JS" value="no"/>
+                        <label class="todo-list__label" for="JS"></label>
+                    </li>
+                    <li class="todo-list__item todo-main-part_style">
+                        <input class="todo-list__checkbox" type="checkbox" id="JS tools" value="no"/>
+                        <label class="todo-list__label" for="JS tools"></label>
+                    </li>
+                </ul>
+                <div class="todo-list-task">
+                    <input class="todo-list__text input-field text todo-main-part_style" type="text" value="HTML"/>
+                    <input class="todo-list__text input-field text todo-main-part_style" type="text" value="CSS"/>
+                    <input class="todo-list__text input-field text todo-main-part_style" type="text" value="JS"/>
+                    <input class="todo-list__text input-field text todo-main-part_style" type="text" value="JS tools"/>
+                </div>
+                <div class="todo-list-delete-button">
+                    <button class="button todo-list-button_img" ></button>
+                    <button class="button todo-list-button_img" ></button>
+                    <button class="button todo-list-button_img" ></button>
+                    <button class="button todo-list-button_img" ></button>
+                </div>
+            </div>
+
+
+            <div class="footer">
+                <span class="counter footer-text_style">
+                    3 items left
+                </span>
+                <span class="footer-button button_centre">
+                    <button class="button footer-button_border footer-text_style">All</button>
+                    <button class="button footer-button_border footer-text_style">Active</button>
+                    <button class="button footer-button_border footer-text_style">Completed</button>
+                </span>
+                <span class="footer-button button_right">
+                    <button class="button footer-button_border footer-text_style">Clear completed</button>
+                </span>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+</body>
+</html>
+

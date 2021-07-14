@@ -1,0 +1,20 @@
+.todo-main-part{
+
+
+}
+.todo-main-part_style{
+    border-bottom: 1px solid whitesmoke;
+    height: 25px;
+    padding: 5px 1px 5px 1px;
+}
+.todo-main-part__center-items{
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 5px lightgray;
+    height: 300px;
+    background-color: white;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: 35px 230px 35px;
+}

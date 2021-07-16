@@ -1,0 +1,9 @@
+.todo-input__input-field::placeholder{
+    font-style: italic;
+    font-size: 18px;
+    color: #dadada;
+}
+
+.todo-main-part_style{
+    padding: 20px 0 0 15px;
+}

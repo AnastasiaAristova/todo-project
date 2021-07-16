@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="todos">
+
+    <div class="header">
+        <div class="header__text">todos</div>
+    </div>
+
+    <div class="todo-main-part">
+        <div class="todo-main-part__center-items">
+            <div class="todo-input todo-main-part_style">
+                <img class="icon" src="icons/select-all.png" alt="">
+                <input class="todo-input__input-field input-field text" type="text" placeholder="What needs to be done?" />
+            </div>
+            <div class="todo-list">
+                <ul class="todo-list-checkbox">
+                    <li class="todo-list__item todo-list__item_style">
+                        <input class="checkbox" type="checkbox" id="HTML" value="no"/>
+                        <label class="checkbox__label" for="HTML"><input class="todo-list__text input-field text " type="text" value="HTML"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                    <li class="todo-list__item todo-list__item_style">
+                        <input class="checkbox" type="checkbox" id="CSS" value="no"/>
+                        <label class="checkbox__label" for="CSS"><input class="todo-list__text input-field text " type="text" value="CSS"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                    <li class="todo-list__item todo-list__item_style">
+                        <input class="checkbox" type="checkbox" id="JS" value="no"/>
+                        <label class="checkbox__label" for="JS"><input class="todo-list__text input-field text " type="text" value="JS"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                    <li class="todo-list__item todo-list__item_style">
+                        <input class="checkbox" type="checkbox" id="JS tools" value="no"/>
+                        <label class="checkbox__label" for="JS tools"><input class="todo-list__text input-field text " type="text" value="JS tools"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer">
+                <span class="counter footer-text_style">
+                    3 items left
+                </span>
+                <span class="footer__buttons button_centre">
+                    <button class="button footer-button_focus-border footer-text_style">All</button>
+                    <button class="button footer-button_focus-border footer-text_style">Active</button>
+                    <button class="button footer-button_focus-border footer-text_style">Completed</button>
+                </span>
+                <span class="footer__buttons button_right">
+                    <button class="button footer-button_active-border footer-text_style">Clear completed</button>
+                </span>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+</body>
+</html>
+

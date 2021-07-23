@@ -54,6 +54,7 @@
     padding-left: 15px;
 }
 
-.todo-list__item_style:first-child{
-    border-top:  1px solid #e6e6e6;
+
+.todo-list__text{
+    width: 100%;
 }

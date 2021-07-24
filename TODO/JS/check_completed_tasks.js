@@ -2,8 +2,9 @@
 
 let check_field= document.getElementById('todo-list-checkbox');
 
-check_field.onclick = function(event){
+check_field.addEventListener('click', ChangeTaskStatus)
 
+function ChangeTaskStatus(event){
     trgt=event.target;
     if(trgt.tagName!=='LABEL') return;
 

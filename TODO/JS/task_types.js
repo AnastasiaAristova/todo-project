@@ -1,19 +1,18 @@
 /*switching between types of tasks */
 
-// all objects in button-centre
+/* all objects in button-centre*/
 let taskButton = document.getElementById("task_types");
 
-taskButton.onclick = function (event){
+taskButton.addEventListener('click',function (event){
     let trgt = event.target;
-
     if(trgt.tagName!=='BUTTON') return;
-
     showTasks(trgt.id);
-}
+})
 
-// show only requested tasks
+/* show only requested tasks*/
 function showTasks(type){
     let alltypes=document.getElementsByClassName('todo-list__item');
+    /*display all tasks*/
     for(let e of alltypes)
         e.style.display='grid';
     if(type==='all')
@@ -23,6 +22,7 @@ function showTasks(type){
     //let list = getTaskList(type);
 
 
+    /*hide non-requested tasks*/
     for(let elem of alltypes){
         if(elem.classList.contains('active') && type!=='active') {
             elem.style.display = 'none';

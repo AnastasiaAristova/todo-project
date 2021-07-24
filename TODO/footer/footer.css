@@ -1,7 +1,7 @@
 .footer{
     height: 20px;
     border-top: 1px solid #e6e6e6;
-    padding: 10px 0 0 10px;
+    padding: 10px 2px 0 10px;
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
@@ -16,12 +16,16 @@
 }
 
 .footer-button_focus-border:focus{
-    border: 1px solid #ebdfdf;
-    border-radius: 10%;
+    outline: 1px solid #ebdfdf;
+    box-shadow: 0 0 1pt 1pt #ebdfdf;
+    /*border: 1px solid #ebdfdf;
+    border-radius: 10%;*/
 }
 .footer-button_active-border:active{
-    border: 1px solid #ebdfdf;
-    border-radius: 10%;
+    outline: 1px solid #ebdfdf;
+    box-shadow: 0 0 1pt 1pt #ebdfdf;
+    /*border: 1px solid #ebdfdf;
+    border-radius: 10%;*/
 }
 .footer-text_style{
     font-size: 15px;

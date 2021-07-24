@@ -3,47 +3,32 @@
 /* all objects in button-centre*/
 let taskButton = document.getElementById("task_types");
 
-taskButton.addEventListener('click',function (event){
-    let trgt = event.target;
-    if(trgt.tagName!=='BUTTON') return;
-    showTasks(trgt.id);
-})
+taskButton.addEventListener('click',showTasks)
 
-/* show only requested tasks*/
-function showTasks(type){
-    let alltypes=document.getElementsByClassName('todo-list__item');
-    /*display all tasks*/
-    for(let e of alltypes)
-        e.style.display='grid';
-    if(type==='all')
-    {
-        return;
-    }
-    //let list = getTaskList(type);
-
-
-    /*hide non-requested tasks*/
-    for(let elem of alltypes){
-        if(elem.classList.contains('active') && type!=='active') {
-            elem.style.display = 'none';
-        }
-        else if(!elem.classList.contains('active') && type==='active'){
-            elem.style.display = 'none';
-        }
-        }
+function showTasks(event){
+    let type = event.target.id;
+    DisplayTasks(type);
+    ChangeCurrentTaskType(type);
 }
 
-
-// get list of tasks that aren't requested
-/*function getTaskList(type){
-    let alltypes=document.getElementsByClassName('todo-list__item');
-    let neededtypes =[];
-    for(let obj of alltypes){
-        obj.style.display='grid';
-        if(!obj.classList.contains(type))
-        {
-            neededtypes.push(obj);
+/* displays tasks of required types*/
+function DisplayTasks(type){
+    let allTypes=document.getElementsByClassName('todo-list__item');
+    for(let elem of allTypes){
+        if(elem.classList.contains(type) || type==='all') {
+            elem.style.display = 'grid';
         }
-    };
-    return neededtypes;
-}*/
+        else{
+            elem.style.display = 'none';
+        }
+    }
+}
+
+/* assign class current-task-type to current type of task */
+function ChangeCurrentTaskType(type){
+    let curTask = document.querySelector('.current-task-type');
+    if(curTask.id === type) return;
+    curTask.classList.remove('current-task-type');
+    document.getElementById(type).classList.add('current-task-type');
+}
+

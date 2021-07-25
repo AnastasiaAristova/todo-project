@@ -1,28 +1,28 @@
 /*cross out completed tasks*/
 
-let checkField= document.getElementsByClassName('todo-list__item');
+const checkField= document.getElementsByClassName('todo-list__item');
 
-for(let elem of checkField) {
-    elem.addEventListener('click', ChangeTaskStatus)
+for(const elem of checkField) {
+    elem.addEventListener('click', changeTaskStatus)
 }
 
-function ChangeTaskStatus(event){
-    let trgt=event.target;
-    let inputField = trgt.querySelector('.todo-list__text');
-    ChangeInputFieldStatus(inputField);
-    ChangeClassStatus(trgt);
-    ChangeFontStyle(inputField);
-    CheckIfShouldDisplay(trgt);
+function changeTaskStatus(event){
+    const trgt=event.target;
+    const inputField = trgt.querySelector('.todo-list__text');
+    changeInputFieldStatus(inputField);
+    changeClassStatus(trgt);
+    changeFontStyle(inputField);
+    hideIfTypeUnfit(trgt);
 }
 
 /* disable/enable input field*/
-function ChangeInputFieldStatus(input){
+function changeInputFieldStatus(input){
     input.disabled = !input.disabled;
 }
 
 /* add/remove class active/completed */
-function ChangeClassStatus(trgt){
-    let listElem = trgt.closest('li');
+function changeClassStatus(trgt){
+    const listElem = trgt.closest('li');
     if(listElem.classList.contains('active'))
     {
         listElem.classList.remove('active');
@@ -37,7 +37,7 @@ function ChangeClassStatus(trgt){
 
 
 /* change decoration and color */
-function ChangeFontStyle(input){
+function changeFontStyle(input){
     if(input.disabled)
     {
         input.style.textDecoration='line-through';
@@ -50,9 +50,9 @@ function ChangeFontStyle(input){
 }
 
 /* checks if chosen element fits the current type of shown tasks and hides it if not*/
-function CheckIfShouldDisplay(trgt){
-    let curTaskType=document.querySelector('.current-task-type').id;
-    let listElem = trgt.closest('li');
+function hideIfTypeUnfit(trgt){
+    const curTaskType=document.querySelector('.current-task-type').id;
+    const listElem = trgt.closest('li');
     if(curTaskType==='all' || listElem.classList.contains(curTaskType)) return;
     setTimeout(() =>listElem.style.display = 'none',300);
 }

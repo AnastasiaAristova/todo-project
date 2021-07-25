@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>TODO</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 <body>
 <div class="todos">
@@ -19,23 +20,23 @@
                 <input class="todo-input__input-field input-field text" type="text" placeholder="What needs to be done?" />
             </div>
             <div class="todo-list">
-                <ul class="todo-list-checkbox">
-                    <li class="todo-list__item todo-list__item_style">
+                <ul class="todo-list-checkbox" id="todo-list-checkbox">
+                    <li class="todo-list__item todo-list__item_style active">
                         <input class="checkbox" type="checkbox" id="HTML" value="no"/>
                         <label class="checkbox__label" for="HTML"><input class="todo-list__text input-field text " type="text" value="HTML"/></label>
-                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                        <button class="button todo-list-delete-button_hover"><img class="icon" src="icons/close.png" alt=""></button>
                     </li>
-                    <li class="todo-list__item todo-list__item_style">
+                    <li class="todo-list__item todo-list__item_style active" >
                         <input class="checkbox" type="checkbox" id="CSS" value="no"/>
                         <label class="checkbox__label" for="CSS"><input class="todo-list__text input-field text " type="text" value="CSS"/></label>
                         <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
                     </li>
-                    <li class="todo-list__item todo-list__item_style">
+                    <li class="todo-list__item todo-list__item_style active">
                         <input class="checkbox" type="checkbox" id="JS" value="no"/>
                         <label class="checkbox__label" for="JS"><input class="todo-list__text input-field text " type="text" value="JS"/></label>
                         <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
                     </li>
-                    <li class="todo-list__item todo-list__item_style">
+                    <li class="todo-list__item todo-list__item_style active">
                         <input class="checkbox" type="checkbox" id="JS tools" value="no"/>
                         <label class="checkbox__label" for="JS tools"><input class="todo-list__text input-field text " type="text" value="JS tools"/></label>
                         <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
@@ -45,14 +46,14 @@
             </div>
 
 
-            <div class="footer">
+            <div class="footer" id="footer">
                 <span class="counter footer-text_style">
                     3 items left
                 </span>
-                <span class="footer__buttons button_centre">
-                    <button class="button footer-button_focus-border footer-text_style">All</button>
-                    <button class="button footer-button_focus-border footer-text_style">Active</button>
-                    <button class="button footer-button_focus-border footer-text_style">Completed</button>
+                <span class="footer__buttons button_centre" id="task_types">
+                    <button class="button footer-button_focus-border footer-text_style current-task-type" id="all">All</button>
+                    <button class="button footer-button_focus-border footer-text_style" id="active">Active</button>
+                    <button class="button footer-button_focus-border footer-text_style" id="completed">Completed</button>
                 </span>
                 <span class="footer__buttons button_right">
                     <button class="button footer-button_active-border footer-text_style">Clear completed</button>
@@ -60,13 +61,14 @@
             </div>
         </div>
 
-
-
     </div>
 
 
 
 </div>
+
+<script src="JS/task_types.js"></script>
+<script src="JS/check_completed_tasks.js"></script>
 </body>
 </html>
 

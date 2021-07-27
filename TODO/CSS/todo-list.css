@@ -53,8 +53,23 @@
     height: 60px;
     padding-left: 15px;
 }
-
-
+.todo-list{
+    overflow-y: hidden;
+}
+.scroll{
+    overflow-y: auto;
+}
+.scroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #dadada;
+    border-radius: 10px;
+}
+.todo-list.close{
+    display: none;
+}
 .todo-list__text{
     width: 100%;
 }

@@ -10,3 +10,7 @@
     display: grid;
     grid-template-rows: 60px 300px 40px;
 }
+.todo-main-part__center-items.close{
+    height: 60px;
+    grid-template-rows: 60px 0 0;
+}

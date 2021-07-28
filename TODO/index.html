@@ -15,10 +15,12 @@
 
     <div class="todo-main-part">
         <div class="todo-main-part__center-items">
-            <div class="todo-input todo-main-part_style">
-                <img class="icon" src="icons/select-all.png" alt="">
+            <div class="todo-input todo-main-part_style todo-input__item_center">
+                <div class="input__icon"><img class="icon" src="icons/select-all.png" alt=""></div>
+
                 <input class="todo-input__input-field input-field text" type="text" placeholder="What needs to be done?" />
             </div>
+
             <div class="todo-list">
                 <ul class="todo-list-checkbox" id="todo-list-checkbox">
                     <li class="todo-list__item todo-list__item_style active">
@@ -39,6 +41,21 @@
                     <li class="todo-list__item todo-list__item_style active">
                         <input class="checkbox" type="checkbox" id="JS tools" value="no"/>
                         <label class="checkbox__label" for="JS tools"><input class="todo-list__text input-field text " type="text" value="JS tools"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                    <li class="todo-list__item todo-list__item_style active" >
+                        <input class="checkbox" type="checkbox" id="CSS1" value="no"/>
+                        <label class="checkbox__label" for="CSS1"><input class="todo-list__text input-field text " type="text" value="CSS1"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                    <li class="todo-list__item todo-list__item_style active">
+                        <input class="checkbox" type="checkbox" id="JS1" value="no"/>
+                        <label class="checkbox__label" for="JS1"><input class="todo-list__text input-field text " type="text" value="JS1"/></label>
+                        <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
+                    </li>
+                    <li class="todo-list__item todo-list__item_style active">
+                        <input class="checkbox" type="checkbox" id="JS tools1" value="no"/>
+                        <label class="checkbox__label" for="JS tools1"><input class="todo-list__text input-field text " type="text" value="JS tools1"/></label>
                         <button class="button todo-list-delete-button_hover" ><img class="icon" src="icons/close.png" alt=""></button>
                     </li>
                 </ul>
@@ -69,6 +86,8 @@
 
 <script src="JS/task_types.js"></script>
 <script src="JS/check_completed_tasks.js"></script>
+<script src="JS/drop-down-list.js"></script>
+<script src="JS/scrollbar.js"></script>
 </body>
 </html>
 

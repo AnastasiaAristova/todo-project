@@ -22,7 +22,7 @@
             </div>
 
             <div class="todo-list">
-                <ul class="todo-list-checkbox" id="todo-list-checkbox">
+                <ul class="todo-list-checkbox">
                     <li class="todo-list__item todo-list__item_style active">
                         <input class="checkbox" type="checkbox" id="HTML" value="no"/>
                         <label class="checkbox__label" for="HTML"><input class="todo-list__text input-field text " type="text" value="HTML"/></label>
@@ -64,16 +64,16 @@
 
 
             <div class="footer" id="footer">
-                <span class="counter footer-text_style">
+                <span class="counter footer-text_style" id="counter">
                     3 items left
                 </span>
                 <span class="footer__buttons button_centre" id="task_types">
-                    <button class="button footer-button_focus-border footer-text_style current-task-type" id="all">All</button>
-                    <button class="button footer-button_focus-border footer-text_style" id="active">Active</button>
-                    <button class="button footer-button_focus-border footer-text_style" id="completed">Completed</button>
+                    <button class="button task-button footer-button_focus-border footer-text_style current-task-type" id="all">All</button>
+                    <button class="button task-button footer-button_focus-border footer-text_style" id="active">Active</button>
+                    <button class="button task-button footer-button_focus-border footer-text_style" id="completed">Completed</button>
                 </span>
-                <span class="footer__buttons button_right">
-                    <button class="button footer-button_active-border footer-text_style">Clear completed</button>
+                <span class="footer__buttons button_right" >
+                    <button class="button footer-button_active-border footer-text_style" id="button_clear">Clear completed</button>
                 </span>
             </div>
         </div>
@@ -88,6 +88,8 @@
 <script src="JS/check_completed_tasks.js"></script>
 <script src="JS/drop-down-list.js"></script>
 <script src="JS/scrollbar.js"></script>
+<script src="JS/task_counter.js"> </script>
+<script src="JS/clear_completed_button.js"></script>
 </body>
 </html>
 

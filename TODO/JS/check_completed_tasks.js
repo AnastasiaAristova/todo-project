@@ -1,6 +1,6 @@
 /*cross out completed tasks*/
 
-const checkField= document.getElementsByClassName('todo-list__item');
+const checkField= document.getElementsByClassName('checkbox__label');
 
 for(const elem of checkField) {
     elem.addEventListener('click', changeTaskStatus)
@@ -9,6 +9,7 @@ for(const elem of checkField) {
 function changeTaskStatus(event){
     const trgt=event.target;
     const inputField = trgt.querySelector('.todo-list__text');
+    //alert(trgt.classList);
     changeInputFieldStatus(inputField);
     changeClassStatus(trgt);
     changeFontStyle(inputField);
@@ -55,4 +56,8 @@ function hideIfTypeUnfit(trgt){
     const listElem = trgt.closest('li');
     if(curTaskType==='all' || listElem.classList.contains(curTaskType)) return;
     setTimeout(() =>listElem.style.display = 'none',300);
+}
+
+function changeIcon(){
+
 }

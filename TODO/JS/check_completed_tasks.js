@@ -3,7 +3,7 @@
 const checkField= document.getElementsByClassName('checkbox__label');
 
 for(const elem of checkField) {
-    elem.addEventListener('click', changeTaskStatus)
+    elem.addEventListener('click', changeTaskStatus);
 }
 
 function changeTaskStatus(event){

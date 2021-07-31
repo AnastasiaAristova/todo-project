@@ -40,11 +40,11 @@
 
 }
 
-.todo-list__item:hover .todo-list-delete-button_hover{
+.todo-list__item:hover .todo-list__delete-button_hover{
     visibility: visible;
     cursor:pointer;
 }
-.todo-list-delete-button_hover{
+.todo-list__delete-button_hover{
     visibility: hidden;
 }
 

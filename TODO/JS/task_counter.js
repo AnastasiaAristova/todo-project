@@ -17,6 +17,25 @@ for(let el of taskButtonsFooter)
 /*clear button*/
 document.getElementById('button_clear').addEventListener('click', recountAfterClear);
 
+/*delete button*/
+const buttonDelete = document.getElementsByClassName('todo-list__delete-button');
+for(const elem of buttonDelete) {
+    elem.addEventListener('click', recountAfterDelete);
+}
+
+/*enter*/
+const inputTask = document.querySelector('.todo-input__input-field');
+inputTask.addEventListener('keydown',recountAfterAdd);
+
+
+/*count after adding new task*/
+function recountAfterAdd(event){
+    if (event.code == 'Enter' && document.querySelector('.current-task-type').id!=='completed')
+    {
+        currCount++;
+        counter.innerHTML=currCount+' items left';
+    }
+}
 
 /*count tasks after displaying different type of tasks*/
 function countTasks(event){
@@ -31,15 +50,22 @@ function countTasks(event){
 /* recount tasks after changing status(active/completed) of a specific task*/
 function recountAfterChecking(event){
     if(document.querySelector('.current-task-type').id==='all') return;
+    if(event.target.type==='text') return;
     currCount--;
     counter.innerHTML = currCount +' items left';
 }
 
 /*recount amount of tasks after clear*/
-function recountAfterClear(event){
+function recountAfterClear(){
     const currTypeTask = document.querySelector('.current-task-type');
     if(currTypeTask.id !== 'completed')
         currCount=document.getElementsByClassName('active').length;
     else currCount=0;
     counter.innerHTML = currCount +' items left';
+}
+
+/*recount amount of tasks after deleting 1*/
+function recountAfterDelete(){
+     currCount--;
+     counter.innerHTML = currCount +' items left';
 }

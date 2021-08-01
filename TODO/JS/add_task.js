@@ -21,6 +21,7 @@ function addTask() {
     addButton(newTask);
     newTask.addEventListener('click', changeTaskStatus);
     inputField.value = '';
+    hideIfInCompleted(newTask);
 }
 function addCheckbox(numElem,newTask){
     const checkbox = document.createElement('input');
@@ -41,6 +42,7 @@ function addLabel(numElem,newTask,textTask){
     input.type = 'text';
     input.value = textTask;
     label.append(input);
+    label.addEventListener('mouseup', recountAfterChecking)
 }
 
 function addButton(newTask){
@@ -52,4 +54,10 @@ function addButton(newTask){
     img.src = 'icons/close.png';
     button.append(img);
     button.addEventListener('click', deleteTask);
+    button.addEventListener('click', recountAfterDelete);
+}
+
+function hideIfInCompleted(task){
+    if(document.querySelector('.current-task-type').id ==='completed')
+        task.style.display = 'none';
 }

@@ -12,23 +12,12 @@ function deleteTask(event){
     task.remove();
 }
 
-function changeId(numId){
-    const task = document.getElementsByClassName('todo-list__checkbox');
-    const label = document.getElementsByClassName('todo-list__checkbox-label');
-    const length = task.length;
-
-    for(let i = +numId+1; i <= length; i++){
-        task[i-1].id = 'id' + (i-1);
-        label[i-1].htmlFor = 'id' + (i-1);
-    }
-}
-
 
 const clearCompletedTaskButton = document.getElementById('button_clear');
 
-clearCompletedTaskButton.addEventListener('click',changeActiveTaskId);
+clearCompletedTaskButton.addEventListener('click',clearCompletedTask);
 
-function changeActiveTaskId(){
+function clearCompletedTask(){
     const elemOfList = document.getElementsByClassName('todo-list__item')
     const length = elemOfList.length;
 
@@ -36,6 +25,20 @@ function changeActiveTaskId(){
         if(elemOfList[i].classList.contains('completed'))
         {
             changeId(i+1);
+            elemOfList[i].remove();
         }
     }
+}
+
+function changeId(idNum){
+    const task = document.getElementsByClassName('todo-list__checkbox');
+    const label = document.getElementsByClassName('todo-list__checkbox-label');
+    const length = task.length;
+
+    for(let i=length-1;i>=idNum;i--)
+    {
+        task[i].id = task[i-1].id;
+        label[i].htmlFor = label[i-1].htmlFor;
+    }
+
 }

@@ -1,7 +1,7 @@
 /*switching between types of tasks */
 
 /* all objects in button-centre*/
-const taskFooter = document.getElementsByClassName("footer-button_focus-border");
+const taskFooter = document.getElementsByClassName("task-button");
 
 for(let el of taskFooter)
     el.addEventListener('click', showTasks);

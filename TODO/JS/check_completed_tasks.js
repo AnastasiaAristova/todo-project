@@ -9,7 +9,6 @@ for(const elem of checkField) {
 function changeTaskStatus(event){
     const trgt=event.target;
     const inputField = trgt.querySelector('.todo-list__text');
-    //alert(trgt.classList);
     changeInputFieldStatus(inputField);
     changeClassStatus(trgt);
     changeFontStyle(inputField);
@@ -58,6 +57,3 @@ function hideIfTypeUnfit(trgt){
     setTimeout(() =>listElem.style.display = 'none',300);
 }
 
-function changeIcon(){
-
-}

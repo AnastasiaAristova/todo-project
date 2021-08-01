@@ -1,9 +1,9 @@
 const fieldInput = document.querySelector('.input__icon');
 
 
-fieldInput.addEventListener('click',openOrCloseList);
+fieldInput.addEventListener('click',toggleListDisplay);
 
-function openOrCloseList(){
+function toggleListDisplay(){
     const list = document.querySelector('.todo-list');
     const fieldList = document.querySelector('.todo-main-part__center-items');
     const footer = document.querySelector('.footer');

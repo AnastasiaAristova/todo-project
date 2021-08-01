@@ -1,9 +1,9 @@
 /*cross out completed tasks*/
 
-const checkField= document.getElementsByClassName('todo-list__item');
+const checkField= document.getElementsByClassName('checkbox__label');
 
 for(const elem of checkField) {
-    elem.addEventListener('click', changeTaskStatus)
+    elem.addEventListener('click', changeTaskStatus);
 }
 
 function changeTaskStatus(event){
@@ -56,3 +56,4 @@ function hideIfTypeUnfit(trgt){
     if(curTaskType==='all' || listElem.classList.contains(curTaskType)) return;
     setTimeout(() =>listElem.style.display = 'none',300);
 }
+

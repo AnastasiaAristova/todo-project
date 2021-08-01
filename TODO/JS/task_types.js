@@ -1,9 +1,10 @@
 /*switching between types of tasks */
 
 /* all objects in button-centre*/
-const taskButton = document.getElementById("task_types");
+const taskFooter = document.getElementsByClassName("task-button");
 
-taskButton.addEventListener('click',showTasks)
+for(let el of taskFooter)
+    el.addEventListener('click', showTasks);
 
 function showTasks(event){
     const type = event.target.id;

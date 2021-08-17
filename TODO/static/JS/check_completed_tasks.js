@@ -1,17 +1,11 @@
 /*cross out completed tasks*/
-
-const checkField= document.getElementsByClassName('checkbox__label');
-
-for(const elem of checkField) {
-    elem.addEventListener('click', changeTaskStatus);
-}
+const checkField= document.getElementsByClassName('todo-list__checkbox-label');
 
 function changeTaskStatus(event){
     const trgt=event.target;
     const inputField = trgt.querySelector('.todo-list__text');
     changeInputFieldStatus(inputField);
     changeClassStatus(trgt);
-    changeFontStyle(inputField);
     hideIfTypeUnfit(trgt);
 }
 
@@ -31,21 +25,6 @@ function changeClassStatus(trgt){
     else{
         listElem.classList.remove('completed');
         listElem.classList.add('active');
-    }
-    //alert(listElem.classList);
-}
-
-
-/* change decoration and color */
-function changeFontStyle(input){
-    if(input.disabled)
-    {
-        input.style.textDecoration='line-through';
-        input.style.color= '#dadada';
-    }
-    else {
-        input.style.textDecoration='none';
-        input.style.color= '#666666';
     }
 }
 

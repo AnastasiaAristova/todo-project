@@ -1,4 +1,4 @@
-
+{% block style%}
 @import "header.css";
 @import "todo-main-part.css";
 @import "todo-input.css";
@@ -25,7 +25,10 @@ body{
 .button{
     border: none;
     background: none;
+    cursor: pointer;
 }
 .checkbox{
     display: none;
 }
+
+{% endblock style%}
